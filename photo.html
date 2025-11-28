@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>AIMS Lab – Photo</title>
+  <link rel="icon" href="./static/img/logo.png">
+  <link rel="stylesheet" href="./static/css/photo.css"? v=3">
+
+</head>
+<body>
+
+  <div class="nav-bar">
+    <div class="nav-left">
+      <a href="/" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit;">
+        <div class="nav-logo"></div>
+        <div class="nav-title">AIMS Lab</div>
+      </a>
+    </div>
+
+    <div class="nav-menu">
+      <a href="/">Home</a>
+      <a href="/research">Research</a>
+
+      <div class="dropdown">
+        <div class="dropdown-main">Members</div>
+        <div class="dropdown-content">
+          <a href="/professor">Professor</a>
+          <a href="/student">Student</a>
+        </div>
+      </div>
+
+      <a href="/publications">Publications</a>
+      <a href="/photo">Photo</a>
+    </div>
+  </div>
+
+  <div class="team">
+    <div class="team-overlay"></div>
+    <div class="team-text">
+      <h1>Photo</h1>
+      <h2>Artificial Intelligence Multimedia Solutions Lab</h2>
+    </div>
+  </div>
+
+  <div class="main-wrapper">
+
+
+
+    <!-- 2025년 -->
+    <div class="photo-year-group active" data-year="2025">
+      <div class="photo-item">
+        <img src="/static/img/logo.png" class="photo-img">
+        <div class="photo-info">
+          <div class="photo-title">2025 추계학술대회</div>
+          <div class="photo-meta">장소: 방송미디어공학회 학술대회</div>
+          <div class="photo-date">Nov 2025</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2024년 -->
+
+    <div class="photo-year-group" data-year="2024">
+      <div class="photo-item">
+        <img src="/static/img/logo.png" class="photo-img">
+        <div class="photo-info">
+          <div class="photo-title">연구실</div>
+          <div class="photo-meta">장소: 성신여자대학교</div>
+          <div class="photo-date">Mar 2024</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2026년 -->
+
+    <div class="photo-year-group" data-year="2026">
+      <div class="photo-item">
+        <img src="/static/img/logo.png" class="photo-img">
+        <div class="photo-info">
+          <div class="photo-title">연구실</div>
+          <div class="photo-meta">장소: 성신여자대학교</div>
+          <div class="photo-date">Mar 2026</div>
+        </div>
+      </div>
+    </div>
+
+
+   <div class="photo-year-bar">
+      <span id="prevYear" class="photo-year-btn">&lt; previous</span>
+      <span class="photo-year-label" id="yearLabel">2025</span>
+      <span id="nextYear" class="photo-year-btn">next &gt;</span>
+    </div>
+  </div>
+
+  <footer class="professor-footer">
+    <div class="footer-inner">
+      <div class="footer-title">AIMS Lab</div>
+
+      <div class="footer-info">
+        Address: B-10, Soojung Building, 2 Bomun-ro 34da-gil,
+        Seongbuk-gu, Seoul 02844, South Korea
+        <br>
+        Email: ybjung@sungshin.ac.kr
+      </div>
+
+      <div class="footer-divider"></div>
+
+      <div class="footer-copy">
+        Copyright © AIMS Lab. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const groups = Array.from(document.querySelectorAll('.photo-year-group'));
+    const years = groups
+      .map(g => g.getAttribute('data-year'))
+      .sort((a, b) => a - b);   // [2024, 2025, 2026]
+
+    let currentIndex = years.indexOf('2025');
+
+    const yearLabel = document.getElementById('yearLabel');
+    const prevBtn = document.getElementById('prevYear');
+    const nextBtn = document.getElementById('nextYear');
+
+    function updateView() {
+      const currentYear = years[currentIndex];
+      yearLabel.textContent = currentYear;
+
+      groups.forEach(g => {
+        g.classList.toggle('active', g.getAttribute('data-year') === currentYear);
+      });
+
+      prevBtn.classList.toggle('disabled', currentIndex === 0);
+      nextBtn.classList.toggle('disabled', currentIndex === years.length - 1);
+    }
+
+    prevBtn.addEventListener('click', () => {
+      if (currentIndex > 0) {
+        currentIndex--;
+        updateView();
+      }
+    });
+
+    nextBtn.addEventListener('click', () => {
+      if (currentIndex < years.length - 1) {
+        currentIndex++;
+        updateView();
+      }
+    });
+
+    updateView();
+  </script>
+
+</body>
+</html>
