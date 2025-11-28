@@ -196,7 +196,7 @@
 
     .photo-img {
       width: 320px;
-      height: 220px;
+      height: 320px;
       object-fit: contain;
       border-radius: 8px;
       background: #FFF;
