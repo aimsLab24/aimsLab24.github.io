@@ -1,281 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>AIMS Lab</title>
+  <meta name="description" content="성신여자대학교 AI융합학부 Artificial Intelligence Multimedia Solutions Lab">
   <link rel="icon" href="./static/img/logo.png">
-    <link rel="stylesheet" href="./static/css/index.css"? v=3">
-
+  <link rel="stylesheet" href="./static/css/style.css?v=13">
 </head>
 <body>
 
-
-  <div class="nav-bar">
-    <div class="nav-left">
-      <a href="/" style="display:flex; align-items:center; gap:12px; text-decoration:none; color:inherit;">
-        <div class="nav-logo"></div>
-        <div class="nav-title">AIMS Lab</div>
-      </a>
-    </div>
-
-    <div class="nav-menu">
-      <a href="/">Home</a>
-      <a href="/research">Research</a>
-
+<header class="nav-bar">
+  <div class="nav-inner">
+    <a class="brand" href="index.html" aria-label="AIMS Lab 홈">
+      <span class="brand-logo"></span>
+      <span class="brand-name">AIMS Lab</span>
+    </a>
+    <button class="nav-toggle" type="button" aria-label="메뉴 열기" aria-expanded="false" aria-controls="nav-menu"><span></span></button>
+    <nav class="nav-menu" id="nav-menu">
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="research.html">Research</a>
       <div class="dropdown">
-        <div class="dropdown-main">Members</div>
+        <button class="dropdown-main" type="button">Members</button>
         <div class="dropdown-content">
-          <a href="/professor">Professor</a>
-          <a href="/student">Student</a>
+          <a href="professor.html">Professor</a>
+          <a href="student.html">Student</a>
         </div>
       </div>
-
-      <a href="/publications">Publications</a>
-      <a href="/photo">Photo</a>
-      <a href="/materials">Materials</a>
-    </div>
+      <a href="publications.html">Publications</a>
+      <a href="photo.html">Photo</a>
+      <a href="materials.html">Materials</a>
+    </nav>
   </div>
+</header>
 
-
-  <div class="team">
-    <div class="team-overlay"></div>
-    <div class="team-text">
-      <h1>AIMS Lab</h1>
-      <h2>Artificial Intelligence Multimedia Solutions Lab</h2>
-      
-    </div>
+<section class="hero">
+  <div class="head-art" aria-hidden="true"></div>
+  <div class="wrap hero-text">
+    <h1>AIMS Lab</h1>
+    <p class="hero-sub">Artificial Intelligence Multimedia Solutions Lab</p>
+    <p class="hero-org">School of AI Convergence, Sungshin Women’s University</p>
   </div>
+  <div class="wrap">
+    <nav class="hero-areas" aria-label="연구 분야">
+      <a href="research.html#asr">Automatic Speech Recognition</a>
+      <a href="research.html#style-transfer">Style Transfer</a>
+      <a href="research.html#denoising">Image Denoising</a>
+      <a href="research.html#video">Video Compression</a>
+    </nav>
+  </div>
+</section>
 
-
-   <div class="main-wrapper">
-
-  <!-- Latest Publications -->
-    <div class="section-header">
-      <div class="section-title">Latest Publications</div>
-    </div>
-    <div class="section-divider"></div>
-
-
-
-
-	  <div class="pub-row">
-      <div class="pub-center">
-        <div class="pub-title">
-          CXR 폐 분할에서 마스크 기준 불일치가 모델 성능에 미치는 영향 분석 및 개선 프레임워크 제안
-        </div>
-        <div class="pub-meta">
-          2026년 한국방송·미디어공학회 추계학술대회
-        </div>
-        <div class="pub-authors">
-          이서현, 김영범, 정영범
-        </div>
+<main class="wrap">
+  <div class="home-grid">
+    <section class="section">
+      <div class="section-head">
+        <h2>Latest Publications</h2>
+        <a href="publications.html">전체 보기</a>
       </div>
-      <div class="publication-year">Nov 2026</div>
-    </div> 
-	   
-     <div class="pub-row">
-      <div class="pub-center">
-        <div class="pub-title">
-          저자원L2 영어 ASR을 위한 LLM 기반 합성음성의 규모 및 혼합 구성 분석
-        </div>
-        <div class="pub-meta">
-          2026년 한국방송·미디어공학회 추계학술대회
-        </div>
-        <div class="pub-authors">
-          이유빈, 김채민, 정영범
-        </div>
+        <article class="pub">
+          <time class="pub-date">Nov 2026</time>
+          <div>
+            <h3 class="pub-title">CXR 폐 분할에서 마스크 기준 불일치가 모델 성능에 미치는 영향 분석 및 개선 프레임워크 제안</h3>
+            <p class="pub-venue">2026년 한국방송·미디어공학회 추계학술대회</p>
+            <p class="pub-authors">이서현, 김영범, 정영범</p>
+          </div>
+        </article>
+        <article class="pub">
+          <time class="pub-date">Nov 2026</time>
+          <div>
+            <h3 class="pub-title">저자원L2 영어 ASR을 위한 LLM 기반 합성음성의 규모 및 혼합 구성 분석</h3>
+            <p class="pub-venue">2026년 한국방송·미디어공학회 추계학술대회</p>
+            <p class="pub-authors">이유빈, 김채민, 정영범</p>
+          </div>
+        </article>
+        <article class="pub">
+          <time class="pub-date">Nov 2026</time>
+          <div>
+            <h3 class="pub-title">L2 영어 데이터 증강을 위한 숙련도별 합성음성 생성 및 다면적 충실도 검증 파이프라인</h3>
+            <p class="pub-venue">2026년 한국방송·미디어공학회 추계학술대회</p>
+            <p class="pub-authors">김연우, 이유빈, 정영범</p>
+          </div>
+        </article>
+        <article class="pub">
+          <time class="pub-date">Nov 2026</time>
+          <div>
+            <h3 class="pub-title">한국인 발화 영어 인식률 개선을 위한 오류패턴 기반의 합성 데이터 생성 방안</h3>
+            <p class="pub-venue">2026년 한국방송·미디어공학회 추계학술대회</p>
+            <p class="pub-authors">김채민, 김연우, 정영범</p>
+          </div>
+        </article>
+        <article class="pub">
+          <time class="pub-date">Sep 2026</time>
+          <div>
+            <h3 class="pub-title">저자원 환경에서 데이터 증강과 LoRA 기반 미세조정을 활용한 한국어 아동 음성 인식 성능 개선 연구</h3>
+            <p class="pub-venue">한국멀티미디어학회</p>
+            <p class="pub-authors">이아현, 송민경, 김수민, 정영범</p>
+          </div>
+        </article>
+        <article class="pub">
+          <time class="pub-date">Mar 2026</time>
+          <div>
+            <h3 class="pub-title">Enhancing Korean-accented English ASR with Transliteration-Based Data Synthesis</h3>
+            <p class="pub-venue">Electronics</p>
+            <p class="pub-authors">Hana Jang, Taehwa Kim, Hyungwoo Choi, Youngbeom Jung</p>
+          </div>
+        </article>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>Latest News</h2>
       </div>
-      <div class="publication-year">Nov 2026</div>
-    </div>
-
-<div class="pub-row">
-      <div class="pub-center">
-        <div class="pub-title">
-          L2 영어 데이터 증강을 위한 숙련도별 합성음성 생성 및 다면적 충실도 검증 파이프라인
-        </div>
-        <div class="pub-meta">
-          2026년 한국방송·미디어공학회 추계학술대회
-        </div>
-        <div class="pub-authors">
-          김연우, 이유빈, 정영범
-        </div>
-      </div>
-      <div class="publication-year">Nov 2026</div>
-    </div>
-
-<div class="pub-row">
-      <div class="pub-center">
-        <div class="pub-title">
-	한국인 발화 영어 인식률 개선을 위한 오류패턴 기반의 합성 데이터 생성 방안
-        </div>
-        <div class="pub-meta">
-          2026년 한국방송·미디어공학회 추계학술대회
-        </div>
-        <div class="pub-authors">
-          김채민, 김연우, 정영범
-        </div>
-      </div>
-      <div class="publication-year">Nov 2026</div>
-    </div>
-
-<div class="pub-row">
-      <div class="pub-center">
-        <div class="pub-title">
-	저자원 환경에서 데이터 증강과 LoRA 기반 미세조정을 활용한 한국어 아동 음성 인식 성능 개선 연구
-        </div>
-        <div class="pub-meta">
-          한국멀티미디어학회
-        </div>
-        <div class="pub-authors">
-          이아현, 송민경, 김수민, 정영범
-        </div>
-      </div>
-      <div class="publication-year">Sep 2026</div>
-    </div>
-     
-    <div class="pub-row">
-      <div class="pub-center">
-        <div class="pub-title">
-          Enhancing Korean-accented English ASR with Transliteration-Based Data Synthesis
-        </div>
-        <div class="pub-meta">
-          Electronics
-        </div>
-        <div class="pub-authors">
-          Hana Jang, Taehwa Kim, Hyungwoo Choi, Youngbeom Jung
-        </div>
-      </div>
-      <div class="publication-year">Mar 2026</div>
-    </div>
-
-
-
-
-    <!-- Latest News -->
-    <div class="section-header">
-      <div class="section-title">Latest News</div>
-    </div>
-    <div class="section-divider"></div>
-	   
-	<div class="news-row">
-      <div class="news-center">
-        <div class="news-title">
-          [한국방송·미디어공학회] 2026년 한국방송·미디어공학회 추계학술대회 총 4건 발표 
-        </div>
-        <div class="news-authors">
-          이서현, 김연우, 김채민, 이유빈
-        </div>
-      </div>
-      <div class="news-date">Nov 2026</div>
-    </div>
-
-
-     <div class="news-row">
-      <div class="news-center">
-        <div class="news-title">
-          [서울미래인재재단] 2026년 AI서울테크 연구지원사업 장학금
-        </div>
-        <div class="news-authors">
-          장하나
-        </div>
-      </div>
-      <div class="news-date">Jun 2026</div>
-    </div>
-
-    <div class="news-row">
-      <div class="news-center">
-        <div class="news-title">
-          [방송미디어공학회] 2025년 추계학술대회 대학생 논문 및 캡스톤디자인 경진대회 우수논문상 장려상
-        </div>
-        <div class="news-content">
-          속도 변형 기반 데이터 증강을 통한 음성 인식 모델 파인튜닝 연구
-        </div>
-        <div class="news-authors">
-          이아현, 김주영, 정영범
-        </div>
-      </div>
-      <div class="news-date">Nov 2025</div>
-    </div>
-
-
-    <div class="news-row">
-      <div class="news-center">
-        <div class="news-title">
-          [방송미디어공학회] 2025년 추계학술대회 대학생 논문 및 캡스톤디자인 경진대회 우수논문상 장려상
-        </div>
-        <div class="news-content">
-          팔레트 제약을 반영한 확산모델 기반 픽셀아트 이미지 생성
-        </div>
-        <div class="news-authors">
-          김수민, 이아현, 정영범
-        </div>
-      </div>
-      <div class="news-date">Nov 2025</div>
-    </div>
-
-
-    <div class="news-row">
-      <div class="news-center">
-        <div class="news-title">
-          [방송미디어공학회] 2025년 추계학술대회 대학생 논문 및 캡스톤디자인 경진대회 우수논문상 장려상
-        </div>
-        <div class="news-content">
-          채널 어텐션 기반 U-Net과 손실 함수 최적화를 통한 화이트밸런스 노이즈 제거
-        </div>
-        <div class="news-authors">
-          김주영, 김수민, 정영범
-        </div>
-      </div>
-      <div class="news-date">Nov 2025</div>
-    </div>
+        <article class="news">
+          <time class="news-date">Nov 2026</time>
+          <span class="news-org">한국방송·미디어공학회</span>
+          <h3 class="news-title">2026년 한국방송·미디어공학회 추계학술대회 총 4건 발표</h3>
+          <p class="news-authors">이서현, 김연우, 김채민, 이유빈</p>
+        </article>
+        <article class="news">
+          <time class="news-date">Jun 2026</time>
+          <span class="news-org">서울미래인재재단</span>
+          <h3 class="news-title">2026년 AI서울테크 연구지원사업 장학금</h3>
+          <p class="news-authors">장하나</p>
+        </article>
+        <article class="news">
+          <time class="news-date">Nov 2025</time>
+          <span class="news-org">방송미디어공학회</span>
+          <h3 class="news-title">2025년 추계학술대회 대학생 논문 및 캡스톤디자인 경진대회 우수논문상 장려상</h3>
+            <p class="news-content">속도 변형 기반 데이터 증강을 통한 음성 인식 모델 파인튜닝 연구</p>
+          <p class="news-authors">이아현, 김주영, 정영범</p>
+        </article>
+        <article class="news">
+          <time class="news-date">Nov 2025</time>
+          <span class="news-org">방송미디어공학회</span>
+          <h3 class="news-title">2025년 추계학술대회 대학생 논문 및 캡스톤디자인 경진대회 우수논문상 장려상</h3>
+            <p class="news-content">팔레트 제약을 반영한 확산모델 기반 픽셀아트 이미지 생성</p>
+          <p class="news-authors">김수민, 이아현, 정영범</p>
+        </article>
+        <article class="news">
+          <time class="news-date">Nov 2025</time>
+          <span class="news-org">방송미디어공학회</span>
+          <h3 class="news-title">2025년 추계학술대회 대학생 논문 및 캡스톤디자인 경진대회 우수논문상 장려상</h3>
+            <p class="news-content">채널 어텐션 기반 U-Net과 손실 함수 최적화를 통한 화이트밸런스 노이즈 제거</p>
+          <p class="news-authors">김주영, 김수민, 정영범</p>
+        </article>
+    </section>
+  </div>
 
   <!--
-    
-    <div class="section-header">
-      <div class="section-title">Join Us</div>
+  <section class="section">
+    <div class="section-head">
+      <h2>Join Us</h2>
     </div>
-    <div class="section-divider"></div>
-  
-    <div class="representative-row">
-      <div class="representative-center">
-        <div class="representative-title">
-          AIMS Lab 연구생을 모집합니다.
-        </div>
-        
-        <div class="representative-meta">
-          Efficient AI, Model Compression, Vision/Audio AI 분야에 관심 있는 학생을 모집합니다.
-        </div>
-        <div class="representative-authors">
-          문의: ybjung(a)sungshin.ac.kr
-        </div>
-       
-    
-      </div>
-      <div class="representative-year">Open</div>
-    </div>
+    <article class="news">
+      <span class="news-org">Open</span>
+      <h3 class="news-title">AIMS Lab 연구생을 모집합니다.</h3>
+      <p class="news-content">Efficient AI, Model Compression, Vision/Audio AI 분야에 관심 있는 학생을 모집합니다.</p>
+      <p class="news-authors">문의: ybjung(a)sungshin.ac.kr</p>
+    </article>
+  </section>
+  -->
+</main>
 
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">AIMS Lab</div>
+        <div class="footer-full">Artificial Intelligence Multimedia Solutions Lab</div>
+        <div class="footer-info">
+          Address: B-10, Soojung Building, 2 Bomun-ro 34da-gil, Seongbuk-gu, Seoul 02844, South Korea<br>
+          Email: ybjung(a)sungshin.ac.kr
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="사이트 링크">
+        <a href="research.html">Research</a>
+        <a href="publications.html">Publications</a>
+        <a href="professor.html">Professor</a>
+        <a href="photo.html">Photo</a>
+        <a href="student.html">Student</a>
+        <a href="materials.html">Materials</a>
+      </nav>
+    </div>
+    <div class="footer-bottom">
+      <span>Copyright © AIMS Lab. All rights reserved.</span>
+      <img src="./static/img/sungshin.png" alt="성신여자대학교">
+    </div>
   </div>
--->
+</footer>
 
-  <footer class="professor-footer">
-    <div class="footer-inner">
-      <div class="footer-title">AIMS Lab</div>
-
-      <div class="footer-info">
-        Address: B-10, Soojung Building, 2 Bomun-ro 34da-gil,
-        Seongbuk-gu, Seoul 02844, South Korea
-        <br>
-        Email: ybjung(a)sungshin.ac.kr
-      </div>
-
-      <div class="footer-divider"></div>
-
-      <div class="footer-copy">
-        Copyright © AIMS Lab. All rights reserved.
-      </div>
-    </div>
-  </footer>
-
+<script src="./static/js/site.js?v=13"></script>
 
 </body>
 </html>
